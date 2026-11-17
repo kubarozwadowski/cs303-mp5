@@ -1,0 +1,125 @@
+:root {
+  --ink: #281c37;
+  --purple: #572787;
+  --line: #b7a5ca;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: #f5effa;
+  color: var(--ink);
+  font: 1rem/1.5 "Instrument Sans", system-ui, sans-serif;
+}
+
+main {
+  width: min(100% - 2rem, 31rem);
+  margin: clamp(2rem, 13vh, 7rem) auto;
+}
+
+h1 {
+  margin: 0 0 1.75rem;
+  padding-bottom: 0.85rem;
+  border-bottom: 2px solid var(--purple);
+  font: 400 clamp(2.5rem, 8vw, 4rem)/1 "Instrument Serif", Georgia, serif;
+  letter-spacing: -0.04em;
+}
+
+label {
+  display: block;
+  margin-bottom: 0.35rem;
+  font-weight: 650;
+}
+
+input,
+button {
+  min-height: 2.75rem;
+  padding: 0.55rem 0.75rem;
+  border: 1px solid var(--line);
+  border-radius: 0.3rem;
+  font: inherit;
+}
+
+input {
+  width: 100%;
+  min-width: 0;
+  background: #fff;
+  color: inherit;
+}
+
+#url {
+  margin-bottom: 1.1rem;
+}
+
+.alias-field,
+.copy-row {
+  display: flex;
+}
+
+.alias-field {
+  border: 1px solid var(--line);
+  border-radius: 0.3rem;
+  background: #e8dcf3;
+}
+
+.alias-field span {
+  align-self: center;
+  padding-inline: 0.75rem;
+  color: var(--purple);
+  font-family: "IBM Plex Mono", monospace;
+}
+
+.alias-field input {
+  border: 0;
+  border-left: 1px solid var(--line);
+  border-radius: 0 0.25rem 0.25rem 0;
+}
+
+button {
+  border-color: var(--purple);
+  background: var(--purple);
+  color: white;
+  cursor: pointer;
+  font-weight: 650;
+}
+
+button:hover:not(:disabled) {
+  background: #421b6b;
+}
+
+button:disabled {
+  opacity: 0.65;
+  cursor: wait;
+}
+
+:focus-visible {
+  outline: 2px solid var(--purple);
+  outline-offset: 2px;
+}
+
+form button {
+  margin-top: 1rem;
+}
+
+p {
+  margin: 0.5rem 0 0;
+  color: #574663;
+  font-size: 0.875rem;
+}
+
+.error {
+  color: #9c1848;
+}
+
+.result {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid var(--line);
+}
+
+.copy-row {
+  gap: 0.5rem;
+}
